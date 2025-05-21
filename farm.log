@@ -1,0 +1,89 @@
+2025-05-21 17:19:25,664 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:19:25,665 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:20:55,191 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:20:55,191 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:25:04,300 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:25:04,300 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:25:04,303 - INFO -  * Restarting with stat
+2025-05-21 17:25:04,971 - WARNING -  * Debugger is active!
+2025-05-21 17:25:04,982 - INFO -  * Debugger PIN: 634-885-638
+2025-05-21 17:33:19 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:33:19 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:33:45 - INFO - 127.0.0.1 - - [21/May/2025 17:33:45] "GET / HTTP/1.1" 200 -
+2025-05-21 17:33:46 - INFO - 127.0.0.1 - - [21/May/2025 17:33:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-21 17:33:48 - INFO - 127.0.0.1 - - [21/May/2025 17:33:48] "GET / HTTP/1.1" 200 -
+2025-05-21 17:33:53 - INFO - 127.0.0.1 - - [21/May/2025 17:33:53] "GET / HTTP/1.1" 200 -
+2025-05-21 17:34:21 - INFO - 127.0.0.1 - - [21/May/2025 17:34:21] "GET / HTTP/1.1" 200 -
+2025-05-21 17:35:49 - INFO - 127.0.0.1 - - [21/May/2025 17:35:49] "GET / HTTP/1.1" 200 -
+2025-05-21 17:35:59 - INFO - 127.0.0.1 - - [21/May/2025 17:35:59] "GET / HTTP/1.1" 200 -
+2025-05-21 17:36:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:36:30 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:36:30 - INFO - 127.0.0.1 - - [21/May/2025 17:36:30] "GET / HTTP/1.1" 200 -
+2025-05-21 17:38:45 - INFO - 127.0.0.1 - - [21/May/2025 17:38:45] "GET / HTTP/1.1" 200 -
+2025-05-21 17:38:52 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:38:52 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:38:58 - INFO - 127.0.0.1 - - [21/May/2025 17:38:58] "GET / HTTP/1.1" 200 -
+2025-05-21 17:39:33 - INFO - 127.0.0.1 - - [21/May/2025 17:39:33] "GET / HTTP/1.1" 200 -
+2025-05-21 17:42:46 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:42:46 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:42:54 - INFO - 127.0.0.1 - - [21/May/2025 17:42:54] "GET / HTTP/1.1" 200 -
+2025-05-21 17:44:28 - INFO - 127.0.0.1 - - [21/May/2025 17:44:28] "GET / HTTP/1.1" 200 -
+2025-05-21 17:48:48 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:48:48 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:48:53 - INFO - 127.0.0.1 - - [21/May/2025 17:48:53] "GET / HTTP/1.1" 200 -
+2025-05-21 17:49:04 - INFO - 127.0.0.1 - - [21/May/2025 17:49:04] "GET / HTTP/1.1" 200 -
+2025-05-21 17:49:33 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:49:33 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:55:59 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:55:59 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:56:02 - INFO - 127.0.0.1 - - [21/May/2025 17:56:02] "GET / HTTP/1.1" 200 -
+2025-05-21 17:56:03 - INFO - 127.0.0.1 - - [21/May/2025 17:56:03] "GET /static/favicon.ico HTTP/1.1" 200 -
+2025-05-21 17:56:12 - INFO - 127.0.0.1 - - [21/May/2025 17:56:12] "GET / HTTP/1.1" 200 -
+2025-05-21 17:56:12 - INFO - 127.0.0.1 - - [21/May/2025 17:56:12] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-05-21 17:56:43 - INFO - 127.0.0.1 - - [21/May/2025 17:56:43] "GET / HTTP/1.1" 200 -
+2025-05-21 17:56:43 - INFO - 127.0.0.1 - - [21/May/2025 17:56:43] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-05-21 17:57:14 - INFO - 127.0.0.1 - - [21/May/2025 17:57:14] "GET / HTTP/1.1" 200 -
+2025-05-21 17:57:14 - INFO - 127.0.0.1 - - [21/May/2025 17:57:14] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-05-21 17:57:45 - INFO - 127.0.0.1 - - [21/May/2025 17:57:45] "GET / HTTP/1.1" 200 -
+2025-05-21 17:57:45 - INFO - 127.0.0.1 - - [21/May/2025 17:57:45] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-05-21 17:58:16 - INFO - 127.0.0.1 - - [21/May/2025 17:58:16] "GET / HTTP/1.1" 200 -
+2025-05-21 17:58:16 - INFO - 127.0.0.1 - - [21/May/2025 17:58:16] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+2025-05-21 17:58:46 - INFO - 127.0.0.1 - - [21/May/2025 17:58:46] "GET / HTTP/1.1" 200 -
+2025-05-21 17:58:46 - INFO - 127.0.0.1 - - [21/May/2025 17:58:46] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-05-21 17:59:04 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-21 17:59:04 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 17:59:11 - INFO - 127.0.0.1 - - [21/May/2025 17:59:11] "GET / HTTP/1.1" 200 -
+2025-05-21 17:59:42 - INFO - 127.0.0.1 - - [21/May/2025 17:59:42] "GET / HTTP/1.1" 200 -
+2025-05-21 18:00:12 - INFO - 127.0.0.1 - - [21/May/2025 18:00:12] "GET / HTTP/1.1" 200 -
+2025-05-21 18:00:43 - INFO - 127.0.0.1 - - [21/May/2025 18:00:43] "GET / HTTP/1.1" 200 -
+2025-05-21 18:01:14 - INFO - 127.0.0.1 - - [21/May/2025 18:01:14] "GET / HTTP/1.1" 200 -
+2025-05-21 18:01:44 - INFO - 127.0.0.1 - - [21/May/2025 18:01:44] "GET / HTTP/1.1" 200 -
+2025-05-21 18:02:00 - INFO - 127.0.0.1 - - [21/May/2025 18:02:00] "GET / HTTP/1.1" 200 -
+2025-05-21 18:02:02 - INFO - 127.0.0.1 - - [21/May/2025 18:02:02] "GET / HTTP/1.1" 200 -
+2025-05-21 18:02:04 - INFO - 127.0.0.1 - - [21/May/2025 18:02:04] "GET / HTTP/1.1" 200 -
+2025-05-21 18:02:27 - INFO - 127.0.0.1 - - [21/May/2025 18:02:27] "GET / HTTP/1.1" 200 -
+2025-05-21 18:02:58 - INFO - 127.0.0.1 - - [21/May/2025 18:02:58] "GET / HTTP/1.1" 200 -
+2025-05-21 18:03:04 - INFO - 127.0.0.1 - - [21/May/2025 18:03:04] "GET / HTTP/1.1" 200 -
+2025-05-21 18:03:35 - INFO - 127.0.0.1 - - [21/May/2025 18:03:35] "GET / HTTP/1.1" 200 -
+2025-05-21 18:04:06 - INFO - 127.0.0.1 - - [21/May/2025 18:04:06] "GET / HTTP/1.1" 200 -
+2025-05-21 18:04:37 - INFO - 127.0.0.1 - - [21/May/2025 18:04:37] "GET / HTTP/1.1" 200 -
+2025-05-21 18:05:08 - INFO - 127.0.0.1 - - [21/May/2025 18:05:08] "GET / HTTP/1.1" 200 -
+2025-05-21 18:05:39 - INFO - 127.0.0.1 - - [21/May/2025 18:05:39] "GET / HTTP/1.1" 200 -
+2025-05-21 18:06:10 - INFO - 127.0.0.1 - - [21/May/2025 18:06:10] "GET / HTTP/1.1" 200 -
+2025-05-21 18:06:41 - INFO - 127.0.0.1 - - [21/May/2025 18:06:41] "GET / HTTP/1.1" 200 -
+2025-05-21 18:07:13 - INFO - 127.0.0.1 - - [21/May/2025 18:07:13] "GET / HTTP/1.1" 200 -
+2025-05-21 18:07:44 - INFO - 127.0.0.1 - - [21/May/2025 18:07:44] "GET / HTTP/1.1" 200 -
+2025-05-21 18:08:15 - INFO - 127.0.0.1 - - [21/May/2025 18:08:15] "GET / HTTP/1.1" 200 -
+2025-05-21 18:08:45 - INFO - 127.0.0.1 - - [21/May/2025 18:08:45] "GET / HTTP/1.1" 200 -
+2025-05-21 18:09:17 - INFO - 127.0.0.1 - - [21/May/2025 18:09:17] "GET / HTTP/1.1" 200 -

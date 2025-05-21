@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم الزراعية</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #97bc62;
+        }
+        body {
+            font-family: 'Arial Arabic', Tahoma;
+            background: #f0f9f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 0 0 15px 15px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .weather-icon {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        .update-time {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>نظام المراقبة الذكية للزراعة 🌾</h1>
+    </div>
+
+    <div class="card">
+        <h2>🌦 تقرير الطقس الحالي</h2>
+        <div class="weather-icon">
+            {% if weather %}
+                {{ '☀️' if 'صافية' in weather.description else '🌧️' }}
+            {% endif %}
+        </div>
+        <p>🌡 درجة الحرارة: {{ weather.temp if weather else 'N/A' }}°C</p>
+        <p>💧 الرطوبة الجوية: {{ weather.humidity if weather else 'N/A' }}%</p>
+        <p>📝 الحالة: {{ weather.description if weather else 'غير متوفرة' }}</p>
+        <p class="update-time">آخر تحديث: {{ now }}</p>
+    </div>
+
+    <script>
+        // تحديث الصفحة كل 30 ثانية
+        setTimeout(() => location.reload(), 30000);
+    </script>
+</body>
+</html>
