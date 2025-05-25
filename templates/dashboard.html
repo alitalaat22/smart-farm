@@ -1,19 +1,182 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>لوحة تحكم المزرعة الذكية</title>
-    <meta http-equiv="refresh" content="5">
+  <meta charset="UTF-8" />
+  <title>لوحة تحكم المزرعة الذكية</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to right, #e3ffe7, #d9f9e5);
+      padding: 20px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    .section {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .sensor-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .sensor {
+      flex: 1 1 150px;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #d9fbe7;
+      text-align: center;
+      border: 1px solid #a5d6a7;
+    }
+
+    .status-alert {
+      background: #fff3cd;
+      padding: 15px;
+      margin-top: 20px;
+      border-left: 6px solid #ff9800;
+    }
+
+    .status-ok {
+      background: #d0f0c0;
+      border-left: 6px solid #4caf50;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+  </style>
+  <script>
+    function toggleSensor(sensor) {
+      fetch("/toggle_sensor", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sensor: sensor })
+      }).then(res => res.json()).then(data => {
+        alert(`تم ${data.enabled ? "تشغيل" : "إيقاف"} حساس ${sensor}`);
+        location.reload();
+      });
+    }
+
+    function toggleIrrigation() {
+      fetch("/toggle_irrigation", { method: "POST" })
+        .then(res => res.json())
+        .then(data => {
+          alert("تم تغيير حالة الري إلى: " + (data.irrigation_on ? "تشغيل" : "إيقاف"));
+          location.reload();
+        });
+    }
+
+    function setPower(source) {
+      fetch("/toggle_power", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ source: source })
+      }).then(res => res.json()).then(data => {
+        alert("تم تغيير مصدر الطاقة إلى " + (source === "solar" ? "الطاقة الشمسية" : "الكهرباء"));
+        location.reload();
+      });
+    }
+  </script>
 </head>
 <body>
-    <h1>🌾 لوحة تحكم المزرعة الذكية</h1>
-    <ul>
-        <li>🕒 التوقيت: {{ timestamp }}</li>
-        <li>🌡 درجة الحرارة: {{ temp }}°C</li>
-        <li>💧 رطوبة الجو: {{ humidity }}%</li>
-        <li>🌱 رطوبة التربة: {{ moisture }}%</li>
-        <li>🔌 مصدر الطاقة: {{ power_source }}</li>
-        <li>☁️ الطقس: {{ weather_desc }} - {{ weather_temp }}°C | {{ weather_humidity }}%</li>
-    </ul>
+  <h1>لوحة التحكم الذكية للمزرعة 🌿</h1>
+
+  <div class="section">
+    <h3>مصدر الطاقة</h3>
+    <button onclick="setPower('solar')">☀️ طاقة شمسية</button>
+    <button onclick="setPower('electric')">⚡ كهرباء</button>
+    <p><strong>الحالي:</strong> {{ data.power_source }}</p>
+  </div>
+
+  <div class="section">
+    <h3>بيانات الحساسات مقابل حالة الطقس</h3>
+    <table>
+      <tr><th>البند</th><th>من الحساس</th><th>من الطقس</th></tr>
+      <tr><td>درجة الحرارة (°C)</td><td>{{ data.temp }}</td><td>{{ data.weather_temp }}</td></tr>
+      <tr><td>رطوبة الجو (%)</td><td>{{ data.humidity }}</td><td>{{ data.weather_humidity }}</td></tr>
+      <tr><td>رطوبة التربة (%)</td><td colspan="2">{{ data.moisture }}</td></tr>
+      <tr><td>الوصف العام للطقس</td><td colspan="2">{{ data.weather_desc }}</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>تحليلات ذكية 🤖</h3>
+    <div class="{{ 'status-alert' if data.need_irrigation else 'status-ok' }}">
+      💧 <strong>حالة الري:</strong> 
+      {{ "المزرعة بحاجة للري 🚿" if data.need_irrigation else "لا حاجة للري حالياً ✅" }}
+    </div>
+
+    <div class="status-alert">
+      🧪 <strong>احتياج التسميد:</strong> 
+      {{ data.fertilizer_recommendation }}
+    </div>
+
+    <div class="status-alert" style="background:#fdd;">
+      🐛 <strong>كشف الآفات:</strong> 
+      {{ data.pest_detected }}
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>تحكم في الحساسات</h3>
+    <div class="sensor-box">
+      <div class="sensor">
+        🌱 التربة: {{ "✅" if data.sensors.soil else "❌" }}
+        <br><button onclick="toggleSensor('soil')">تبديل</button>
+      </div>
+      <div class="sensor">
+        🌡 الحرارة: {{ "✅" if data.sensors.temp else "❌" }}
+        <br><button onclick="toggleSensor('temp')">تبديل</button>
+      </div>
+      <div class="sensor">
+        💧 الرطوبة: {{ "✅" if data.sensors.humidity else "❌" }}
+        <br><button onclick="toggleSensor('humidity')">تبديل</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>نظام الري</h3>
+    <p>الحالة الحالية: {{ "🟢 يعمل" if data.irrigation_on else "🔴 متوقف" }}</p>
+    <button onclick="toggleIrrigation()">تشغيل / إيقاف الري</button>
+  </div>
+
 </body>
 </html>

@@ -5,5 +5,12 @@
   "enable_alerts": true,
   "weather_api_key": "1f009cd4b37ccb9e64a53e72d2fdcf90",
   "weather_location": "Zagazig,EG",
-  "whatsapp_number": "+201092530806"
+  "whatsapp_number": "+201092530806",
+  "irrigation_on": false,
+  "sensors": {
+    "temperature": false,
+    "humidity": true,
+    "moisture": true,
+    "soil": false
+  }
 }
