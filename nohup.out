@@ -2,3 +2,52 @@
 [2025-05-21 20:04:13 +0300] [21993] [INFO] Listening at: http://0.0.0.0:80 (21993)
 [2025-05-21 20:04:13 +0300] [21993] [INFO] Using worker: sync
 [2025-05-21 20:04:13 +0300] [21994] [INFO] Booting worker with pid: 21994
+[2025-05-21 20:19:39 +0300] [21993] [INFO] Handling signal: hup
+[2025-05-21 20:19:39 +0300] [21993] [INFO] Hang up: Master
+[2025-05-21 20:19:39 +0300] [21993] [ERROR] Worker (pid:21994) was sent SIGHUP!
+[2025-05-21 20:19:39 +0300] [24443] [INFO] Booting worker with pid: 24443
+[2025-05-22 03:41:18 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24443)
+[2025-05-22 03:41:21 +0300] [24443] [INFO] Worker exiting (pid: 24443)
+[2025-05-22 03:41:21 +0300] [21993] [ERROR] Worker (pid:24443) exited with code 1
+[2025-05-22 03:41:21 +0300] [21993] [ERROR] Worker (pid:24443) exited with code 1.
+[2025-05-22 03:41:21 +0300] [24444] [INFO] Booting worker with pid: 24444
+[2025-05-22 06:32:10 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24444)
+[2025-05-22 06:32:10 +0300] [24444] [INFO] Worker exiting (pid: 24444)
+[2025-05-22 06:32:12 +0300] [21993] [ERROR] Worker (pid:24444) was sent SIGKILL! Perhaps out of memory?
+[2025-05-22 06:32:12 +0300] [24445] [INFO] Booting worker with pid: 24445
+[2025-05-22 13:10:36 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24445)
+[2025-05-22 13:10:36 +0300] [24445] [INFO] Worker exiting (pid: 24445)
+[2025-05-22 13:10:39 +0300] [21993] [ERROR] Worker (pid:24445) was sent SIGKILL! Perhaps out of memory?
+[2025-05-22 13:10:39 +0300] [24446] [INFO] Booting worker with pid: 24446
+[2025-05-23 04:51:31 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24446)
+[2025-05-23 04:51:34 +0300] [24446] [INFO] Worker exiting (pid: 24446)
+[2025-05-23 04:51:34 +0300] [21993] [ERROR] Worker (pid:24446) exited with code 1
+[2025-05-23 04:51:34 +0300] [21993] [ERROR] Worker (pid:24446) exited with code 1.
+[2025-05-23 04:51:34 +0300] [24447] [INFO] Booting worker with pid: 24447
+[2025-05-23 07:59:07 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24447)
+[2025-05-23 07:59:07 +0300] [24447] [INFO] Worker exiting (pid: 24447)
+[2025-05-23 07:59:10 +0300] [21993] [ERROR] Worker (pid:24447) was sent SIGKILL! Perhaps out of memory?
+[2025-05-23 07:59:10 +0300] [24448] [INFO] Booting worker with pid: 24448
+[2025-05-23 17:09:24 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24448)
+[2025-05-23 17:09:26 +0300] [24448] [INFO] Worker exiting (pid: 24448)
+[2025-05-23 17:09:26 +0300] [21993] [ERROR] Worker (pid:24448) exited with code 1
+[2025-05-23 17:09:26 +0300] [21993] [ERROR] Worker (pid:24448) exited with code 1.
+[2025-05-23 17:09:26 +0300] [24449] [INFO] Booting worker with pid: 24449
+[2025-05-24 06:04:52 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24449)
+[2025-05-24 06:04:54 +0300] [24449] [INFO] Worker exiting (pid: 24449)
+[2025-05-24 06:04:54 +0300] [21993] [ERROR] Worker (pid:24449) exited with code 1
+[2025-05-24 06:04:54 +0300] [21993] [ERROR] Worker (pid:24449) exited with code 1.
+[2025-05-24 06:04:54 +0300] [24450] [INFO] Booting worker with pid: 24450
+[2025-05-24 10:11:27 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24450)
+[2025-05-24 10:11:27 +0300] [24450] [INFO] Worker exiting (pid: 24450)
+[2025-05-24 10:11:29 +0300] [21993] [ERROR] Worker (pid:24450) was sent SIGKILL! Perhaps out of memory?
+[2025-05-24 10:11:29 +0300] [24451] [INFO] Booting worker with pid: 24451
+[2025-05-24 19:47:56 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24451)
+[2025-05-24 19:47:58 +0300] [24451] [INFO] Worker exiting (pid: 24451)
+[2025-05-24 19:47:58 +0300] [21993] [ERROR] Worker (pid:24451) exited with code 1
+[2025-05-24 19:47:58 +0300] [21993] [ERROR] Worker (pid:24451) exited with code 1.
+[2025-05-24 19:47:58 +0300] [24452] [INFO] Booting worker with pid: 24452
+[2025-05-25 06:40:23 +0300] [21993] [CRITICAL] WORKER TIMEOUT (pid:24452)
+[2025-05-25 06:40:23 +0300] [24452] [INFO] Worker exiting (pid: 24452)
+[2025-05-25 06:40:26 +0300] [21993] [ERROR] Worker (pid:24452) was sent SIGKILL! Perhaps out of memory?
+[2025-05-25 06:40:26 +0300] [24453] [INFO] Booting worker with pid: 24453

@@ -1,0 +1,8 @@
+{
+  "moisture_threshold": 40,
+  "temp_warning": 38,
+  "use_solar": true,
+  "enable_alerts": true,
+  "weather_api_key": "1f009cd4b37ccb9e64a53e72d2fdcf90",
+  "weather_location": "Zagazig,EG"
+}
