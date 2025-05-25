@@ -119,10 +119,46 @@ def dashboard_loop():
 
         time.sleep(5)
 
-# --- بدء التشغيل ---
+# --- بدء التشغيل وتحديث البيانات في الخلفية ---
+def update_data():
+    irrigation = SmartIrrigation()
+    while True:
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        temp = read_temperature()
+        humidity = read_humidity()
+        moisture = read_soil_moisture()
+        weather_temp, weather_humidity, weather_desc = get_weather_forecast()
+
+        data = {
+            "timestamp": now,
+            "temp": temp,
+            "humidity": humidity,
+            "moisture": moisture,
+            "weather_temp": weather_temp,
+            "weather_humidity": weather_humidity,
+            "weather_desc": weather_desc,
+            "power_source": check_power_source()
+        }
+
+        # حفظ البيانات في ملف JSON
+        with open("data.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+        # تشغيل/إيقاف الري والإنذارات
+        if moisture < MOISTURE_THRESHOLD or predict_irrigation_need(moisture, temp, humidity):
+            irrigation.turn_on()
+        else:
+            irrigation.turn_off()
+
+        if temp > TEMP_WARNING:
+            send_alert("درجة حرارة مرتفعة! راقب المحصول")
+
+        time.sleep(5)
+
+# --- تشغيل البرنامج ---
 if __name__ == "__main__":
     logger.info("🚀 بدء تشغيل النظام الذكي المتكامل لإدارة الأرض الزراعية...")
     try:
-        dashboard_loop()
+        update_data()
     except KeyboardInterrupt:
-        logger.info("🛑 تم إيقاف النظام يدويًا")
+        logger.info("🛑 تم الإيقاف يدويًا")
